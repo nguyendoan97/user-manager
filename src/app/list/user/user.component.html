@@ -1,0 +1,28 @@
+<div class="container">
+  <form class="form-inline my-2 my-lg-0">
+        <app-input-search (keyup)="search($event)"></app-input-search>
+  </form>
+  <br>
+  <div class="card">
+    <table class="table">
+      <thead class="thead-light">
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Group</th>
+        <th scope="col">Option</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let user of userFilter;let i = index">
+        <th scope="row">{{i + 1}}</th>
+        <td>{{ user.name }}</td>
+        <td>{{ user.email}}</td>
+        <td><app-group></app-group></td>
+        <td><button class="btn btn-danger" (click)="delete(user.id)">Delete</button></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
