@@ -6,17 +6,25 @@ import { AppComponent } from './app.component';
 import {NavComponent} from './menu/nav/nav.component';
 import {UserComponent} from './list/user/user.component';
 import {InputSearchComponent} from './list/input-search/input-search.component';
+import {GroupComponent} from './list/group/group.component';
+import {ReactiveFormsModule} from '@angular/forms';
+import {UserAddComponent} from './list/user-add/user-add.component';
+import { UserEditComponent } from './list/user-edit/user-edit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     UserComponent,
-    InputSearchComponent
+    InputSearchComponent,
+    GroupComponent,
+    UserAddComponent,
+    UserEditComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
